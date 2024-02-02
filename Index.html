@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart Simulator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="overallContainer">
+        <div id="optionsContainer">
+            <div id="playerContainer">
+                <input type="text" id="player" placeholder="Player Name">
+                <input type="text" id="playerTwo" placeholder="Player Name">
+                <input type="checkbox" name="Two players" id="twoPlayers"> two players
+            </div>
+        
+            <div id="gameModeContainer">
+                <select id="bots" name="botDifficulty">
+                    <option value="0">Level 1</option>
+                    <option value="1">Level 2</option>
+                    <option value="2">Level 3</option>
+                    <option value="3">Level 4</option>
+                    <option value="4">Level 5</option>
+                    <option value="5">Level 6</option>
+                    <option value="6">Level 7</option>
+                    <option value="7">Level 8</option>
+                    <option value="8">Level 9</option>
+                    <option value="9">The Power</option>
+                </select>
+                <select id="modes" name="gameMode">
+                    <option value="501">501</option>
+                    <option value="301">301</option>
+                </select>
+                <br>
+                Leg: <input type="number" id="legs" min="1" value="1">
+                Set: <input type="number" id="sets" min="1" value="1">
+                <button id="startGame">Start Game</button>
+            </div>
+        </div>
+    
+        <div id="container">
+            <canvas width="600" height="600" id="canvas"></canvas>
+        </div>
+    
+        <div id="gameStateContainer">
+            <div id="leftPlayer">
+                <p id="leftPlayerName"></p>
+                <p id="leftPlayerPoints"></p>
+                <p id="leftPlayerLegs"></p>
+                <p id="leftPlayerSets"></p>
+                <p id="leftPlayerAverage"></p>
+                <p id="leftPlayerFinish"></p>
+                <p id="leftPlayerDarts"></p>
+            </div>
+            <div id="rightPlayer">
+                <p id="rightPlayerName"></p>
+                <p id="rightPlayerPoints"></p>
+                <p id="rightPlayerLegs"></p>
+                <p id="rightPlayerSets"></p>
+                <p id="rightPlayerAverage"></p>
+                <p id="rightPlayerFinish"></p>
+                <p id="rightPlayerDarts"></p>
+            </div>  
+        </div>
+    </div>
+</body>
+<script src="js/vector.js"></script>
+<script src="js/players.js"></script>
+<script src="js/dartBoard.js"></script>
+<script src="js/game.js"></script>
+<script src="js/app.js"></script>
+</html>

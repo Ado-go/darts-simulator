@@ -1,0 +1,67 @@
+canvas{
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+#overallContainer{
+    text-align: center;
+}
+
+body{
+    user-select: none;
+}
+
+#container{
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+}
+
+#optionsContainer{
+    width: 100px;
+    margin-right: 100px;
+    display: inline-block;
+}
+
+#playerContainer{
+    width: 100px;
+}
+
+#gameModeContainer{
+    margin-top: 50px;
+    width: 100px;
+}
+
+#gameStateContainer{
+    width: 420px;
+    height: 150px;
+    display: inline-block;
+    text-align: center;
+    visibility: hidden;
+}
+
+#leftPlayer{
+    background-color: lightBlue;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    font-size: 30px;
+}
+
+#rightPlayer{
+    background-color: lightcoral;
+    display: inline-block;
+    width: 200px; 
+    height: 100px;
+    font-size: 30px;
+}
+
+#playerTwo{
+    visibility: hidden;
+}
+
+.playersTurn{
+    border: 4px solid gold;
+}
