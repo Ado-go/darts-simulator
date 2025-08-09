@@ -1,4 +1,4 @@
-# darts-simulator
+# Darts-simulator
 
 A simple and fun dartboard program where you can mark exactly where your dart lands. 
 The app automatically calculates your score and average, and lets you play solo,
