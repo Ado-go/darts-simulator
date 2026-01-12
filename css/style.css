@@ -1,67 +1,140 @@
-canvas{
-    background-color: lightblue;
-    cursor: pointer;
+* {
+  box-sizing: border-box;
 }
 
-#overallContainer{
-    text-align: center;
+canvas {
+  background-color: lightblue;
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-body{
-    user-select: none;
+#overallContainer {
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-#container{
-    width: 600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-block;
+body {
+  user-select: none;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-#optionsContainer{
-    width: 100px;
-    margin-right: 100px;
-    display: inline-block;
+#container {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#playerContainer{
-    width: 100px;
+#optionsContainer {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 20px;
 }
 
-#gameModeContainer{
-    margin-top: 50px;
-    width: 100px;
+#playerContainer {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-#gameStateContainer{
-    width: 420px;
-    height: 150px;
-    display: inline-block;
-    text-align: center;
-    visibility: hidden;
+#playerContainer input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-#leftPlayer{
-    background-color: lightBlue;
-    display: inline-block;
-    width: 200px;
-    height: 100px;
-    font-size: 30px;
+#playerContainer input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
 }
 
-#rightPlayer{
-    background-color: lightcoral;
-    display: inline-block;
-    width: 200px; 
-    height: 100px;
-    font-size: 30px;
+#gameModeContainer {
+  width: 100%;
 }
 
-#playerTwo{
-    visibility: hidden;
+#gameModeContainer select,
+#gameModeContainer input[type="number"],
+#gameModeContainer button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-.playersTurn{
-    border: 4px solid gold;
+#gameModeContainer input[type="number"] {
+  margin: 10px 0;
+}
+
+#gameStateContainer {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  visibility: hidden;
+  padding: 10px;
+}
+
+#leftPlayer {
+  background-color: lightBlue;
+  flex: 1;
+  min-width: 150px;
+  padding: 15px;
+  font-size: clamp(12px, 2vw, 20px);
+  border-radius: 8px;
+}
+
+#rightPlayer {
+  background-color: lightcoral;
+  flex: 1;
+  min-width: 150px;
+  padding: 15px;
+  font-size: clamp(12px, 2vw, 20px);
+  border-radius: 8px;
+}
+
+#leftPlayer p,
+#rightPlayer p {
+  margin: 5px 0;
+}
+
+#playerTwo {
+  visibility: hidden;
+}
+
+.playersTurn {
+  border: 4px solid gold;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  #overallContainer {
+    padding: 5px;
+  }
+
+  #optionsContainer {
+    margin-bottom: 20px;
+  }
+
+  #gameStateContainer {
+    flex-direction: column;
+  }
+
+  #leftPlayer,
+  #rightPlayer {
+    width: 100%;
+    min-width: unset;
+  }
 }
